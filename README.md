@@ -11,12 +11,14 @@ The agent-facing instructions live in [`AGENTS.md`](./AGENTS.md) (`CLAUDE.md` is
    ```bash
    which anytype-agent-runtime
    ```
-   If missing, see installation in [`AGENTS.md`](./AGENTS.md#setup).
-3. An `.env` in the skill directory with your Anytype API token (see `AGENTS.md`).
+   If missing, see installation in [`AGENTS.md`](./AGENTS.md#setup). But your agent should handle that.
+3. An `.env` in the skill directory with your Anytype API token (see `AGENTS.md`). This also will be created by agent.
 
 ## Installing the skill
 
 This skill follows the open [Agent Skills](https://agentskills.io) format, so every compatible agent installs it the same way: drop the repo into the agent's skills directory. Pick the one you use.
+
+You can install it as a system skill for your agent or just clone this repo and start working from there. Here are instructions on how to install it as a system skill:
 
 ### Claude Code
 
@@ -43,14 +45,6 @@ git clone https://github.com/anyproto/anytype-agents-skill
 clawhub install ./anytype-agents-skill
 ```
 
-Or publish to the registry once you're happy with it:
-
-```bash
-clawhub publish ./anytype-agents-skill
-```
-
-(Requires a GitHub account at least one week old.) See [OpenClaw skills docs](https://docs.openclaw.ai/tools/skills).
-
 ### Hermes Agent
 
 ```bash
@@ -71,7 +65,7 @@ Once installed, ask the agent what you want to do with Anytype — it'll load th
 - "Create a new `task` object titled 'Review PR #42' with status `in-progress`."
 - "List all properties on the `book` type."
 
-The agent writes a JS script that imports `anytypeHelper` and runs it via `anytype-agent-runtime`. You can also run scripts yourself:
+The agent writes a JS script that imports `anytypeHelper` and runs it via `anytype-agent-runtime`. You can also run scripts yourself once agent runtime is installed on your system:
 
 ```bash
 anytype-agent-runtime -m . your-script.js
