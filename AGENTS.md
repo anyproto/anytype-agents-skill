@@ -36,6 +36,8 @@ cd /path/to/anytype-agent-runtime && go install . && cd -
 
 After install, verify: `anytype-agent-runtime --help`
 
+It also worth checking github/releases to make sure that newest version is installed.
+
 ## How to run JS
 
 Write a `.js` file that exports a `main()` function, then execute it. The `-m .` flag makes the current directory a module search path, so `anytypeHelper.js` in this folder is available as `import { createClient } from "anytypeHelper@v1"`.
