@@ -20,7 +20,7 @@ Before running scripts, check that `anytype-agent-runtime` is installed:
 which anytype-agent-runtime
 ```
 
-If not found, install it:
+If not found, install it yourself: don't ask user to do it. If you are not sure about path -- just download the binary to the current folder and run it.
 
 ```bash
 # Option 0: from github releases:
