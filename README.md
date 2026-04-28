@@ -16,46 +16,15 @@ The agent-facing instructions live in [`AGENTS.md`](./AGENTS.md) (`CLAUDE.md` is
 
 ## Installing the skill
 
-This skill follows the open [Agent Skills](https://agentskills.io) format, so every compatible agent installs it the same way: drop the repo into the agent's skills directory. Pick the one you use.
-
-You can install it as a system skill for your agent or just clone this repo and start working from there. Here are instructions on how to install it as a system skill:
-
-### Claude Code
-
-```bash
-git clone https://github.com/anyproto/anytype-agents-skill ~/.claude/skills/anytype-agents
-```
-
-Restart Claude Code; the skill becomes discoverable by description. Project-scoped install: clone into `.claude/skills/anytype-agents` inside your repo instead.
-
-### OpenAI Codex
-
-```bash
-git clone https://github.com/anyproto/anytype-agents-skill ~/.codex/skills/anytype-agents
-```
-
-Codex reads `SKILL.md`/`AGENTS.md` from skills directories automatically. See the [Codex skills docs](https://developers.openai.com/codex/skills/).
-
-### OpenClaw (ClawHub marketplace)
-
-Local install from this repo:
+Clone the repo and start your agent from inside it:
 
 ```bash
 git clone https://github.com/anyproto/anytype-agents-skill
-clawhub install ./anytype-agents-skill
+cd anytype-agents-skill
+# then launch your agent here, e.g. `claude`, `codex`, etc.
 ```
 
-### Hermes Agent
-
-```bash
-git clone https://github.com/anyproto/anytype-agents-skill ~/.hermes/skills/anytype-agents
-```
-
-Hermes auto-indexes skills in its skills directory on next launch. See the [Hermes skills hub](https://hermes-agent.nousresearch.com/docs/skills/).
-
-### Any other AgentSkills-compatible agent
-
-Cursor, Gemini CLI, Goose, OpenCode, OpenHands, GitHub Copilot, and others all support the same format — consult your agent's docs for the skills directory path and clone this repo into it.
+The agent-facing instructions in `AGENTS.md` (and the `CLAUDE.md` symlink) are picked up automatically by Claude Code, OpenAI Codex, Cursor, Gemini CLI, Goose, OpenCode, OpenHands, GitHub Copilot, and other [Agent Skills](https://agentskills.io)-compatible agents when launched from the repo root.
 
 ## Using it
 
