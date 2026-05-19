@@ -2,7 +2,7 @@
 
 A portable skill that lets AI coding agents script [Anytype](https://anytype.io) through the [`anytype-agent-runtime`](https://github.com/anyproto/anytype-agent-runtime) — creating objects, managing types/properties, and running full-text and semantic search.
 
-The standards-compliant Agent Skill now lives in [`.agents/skills/anytype-data-management/SKILL.md`](./.agents/skills/anytype-data-management/SKILL.md). The JS client lib is [`anytypeHelper.js`](./anytypeHelper.js), with its API documented in [`anytypeHelper.md`](./anytypeHelper.md). [`AGENTS.md`](./AGENTS.md) and `CLAUDE.md` remain as compatibility shims for clients that still auto-load root instruction files.
+The standards-compliant Agent Skill lives in [`.agents/skills/anytype-data-management/SKILL.md`](./.agents/skills/anytype-data-management/SKILL.md). The JS client lib is [`anytypeHelper.js`](./anytypeHelper.js), with its API documented in [`anytypeHelper.md`](./anytypeHelper.md). [`AGENTS.md`](./AGENTS.md) and `CLAUDE.md` remain as compatibility shims for clients that still auto-load root instruction files.
 
 ## Prerequisites
 
