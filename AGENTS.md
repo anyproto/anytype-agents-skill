@@ -1,5 +1,9 @@
 # Anytype Agent Runtime
 
+Compatibility note: the standards-compliant Agent Skill for this repository now lives at `.agents/skills/anytype-data-management/SKILL.md`.
+
+If your client supports Agent Skills discovery, prefer that skill directory and the included marketplace manifests. This root file remains for clients that still auto-load `AGENTS.md` or `CLAUDE.md` from the repository root.
+
 ## What is Anytype
 
 Anytype is a local-first, privacy-focused knowledge management platform. Everything in Anytype is an **object** with a **type**. Types define which properties an object can have. You can:

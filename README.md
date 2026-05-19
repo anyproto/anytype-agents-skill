@@ -2,7 +2,7 @@
 
 A portable skill that lets AI coding agents script [Anytype](https://anytype.io) through the [`anytype-agent-runtime`](https://github.com/anyproto/anytype-agent-runtime) — creating objects, managing types/properties, and running full-text and semantic search.
 
-The agent-facing instructions live in [`AGENTS.md`](./AGENTS.md) (`CLAUDE.md` is a symlink to it). The JS client lib is [`anytypeHelper.js`](./anytypeHelper.js), with its API documented in [`anytypeHelper.md`](./anytypeHelper.md).
+The standards-compliant Agent Skill now lives in [`.agents/skills/anytype-data-management/SKILL.md`](./.agents/skills/anytype-data-management/SKILL.md). The JS client lib is [`anytypeHelper.js`](./anytypeHelper.js), with its API documented in [`anytypeHelper.md`](./anytypeHelper.md). [`AGENTS.md`](./AGENTS.md) and `CLAUDE.md` remain as compatibility shims for clients that still auto-load root instruction files.
 
 ## Prerequisites
 
@@ -16,15 +16,35 @@ The agent-facing instructions live in [`AGENTS.md`](./AGENTS.md) (`CLAUDE.md` is
 
 ## Installing the skill
 
-Clone the repo and start your agent from inside it:
+Clone the repo and use one of the installation paths below:
 
 ```bash
-git clone https://github.com/anyproto/anytype-agents-skill
+git clone https://github.com/anyproto/anytype-agents-skill.git
 cd anytype-agents-skill
-# then launch your agent here, e.g. `claude`, `codex`, etc.
 ```
 
-The agent-facing instructions in `AGENTS.md` (and the `CLAUDE.md` symlink) are picked up automatically by Claude Code, OpenAI Codex, Cursor, Gemini CLI, Goose, OpenCode, OpenHands, GitHub Copilot, and other [Agent Skills](https://agentskills.io)-compatible agents when launched from the repo root.
+For clients that scan the standard Agent Skills tree, the skill is available at:
+
+```text
+.agents/skills/
+   anytype-data-management/
+      SKILL.md
+      references/
+```
+
+For Claude Code marketplace-style installation, register the included manifest:
+
+```bash
+/plugin marketplace add ./.claude-plugin/marketplace.json
+```
+
+For clients or scripts that want a repo-root manifest, use:
+
+```bash
+cat marketplace.json
+```
+
+If your client still relies on root instruction files, launch it from the repo root and it can use [`AGENTS.md`](./AGENTS.md) as a compatibility entry point.
 
 ## Using it
 

@@ -1,0 +1,21 @@
+{
+  "name": "anytype-agent-skills",
+  "owner": {
+    "name": "anyproto"
+  },
+  "metadata": {
+    "description": "Agent Skills for Anytype data management through anytype-agent-runtime and anytypeHelper",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "anytype-data-management",
+      "description": "Create, search, update, and organize Anytype data from an agent",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "../.agents/skills/anytype-data-management"
+      ]
+    }
+  ]
+}
